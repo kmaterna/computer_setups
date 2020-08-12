@@ -13,6 +13,7 @@ others: pip install utm
 others: pip install pyrocko
 others: pip install pyqt5
 others: pip install geojson
+others: pip install h5py
 okada_wrapper: pip install okada_wrapper
 
 kite native installation: 
