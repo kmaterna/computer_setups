@@ -14,7 +14,9 @@ others: pip install pyrocko
 others: pip install pyqt5
 others: pip install geojson
 others: pip install h5py
+others: pip install netCDF4
 okada_wrapper: pip install okada_wrapper
+
 
 kite native installation: 
 git clone https://github.com/pyqtgraph/pyqtgraph.git
