@@ -15,6 +15,7 @@ others: pip install pyqt5
 others: pip install geojson
 others: pip install h5py
 others: pip install netCDF4
+others: pip install pandas
 okada_wrapper: pip install okada_wrapper
 
 
@@ -35,7 +36,7 @@ pygmt Conda Environment:
 conda create --name pygmt python=3.6 pip numpy pandas xarray packaging gmt=6.0.0
 conda activate pygmt
 pip install https://github.com/GenericMappingTools/pygmt/archive/master.zip
-Because I sometimes want to work with both pygmt and kite, I followed the regular instructions for the pygmt environment too. 
+Because I sometimes want to work with both pygmt and kite, I followed the kite instructions for the pygmt environment too. 
 
 
 Installing ISCE:
@@ -43,6 +44,5 @@ conda create --name isceenv python=3.6 pip numpy pandas xarray
 conda activate isceenv
 conda install -c conda-forge isce2
 pip install matplotlib
-(then ran kite setup.py install and pyqtgraph setup.py install and pip install xlrd/utm/pyrocko/pyqt5/geojson/okada_wrapper , from this env too)
-(went into software and python setup.py installed the slippy module in this environment too)
+(then ran kite setup.py install and pyqtgraph setup.py install and pip install xlrd/utm/pyrocko/pyqt5/geojson/okada_wrapper, from this env too)
 
