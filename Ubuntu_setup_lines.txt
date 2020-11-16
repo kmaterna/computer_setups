@@ -1,0 +1,88 @@
+January 23, 2020
+Initial configuration of the Dell Ubuntu Box
+
+The first thing I had to do was manually remove a set of double-quotes from /etc/apt/sources.list, line 52. The quotes were making it impossible to read the deb stable main line.  I could even see the error message pasted across the top of the GUI when I opened Ubuntu Software Center. 
+So I typed: 
+gedit /etc/apt/sources.list
+Then I manually removed the quotes from the last line. 
+
+To configure the system with good UNIX things like vim, screen, git, curl, g++, fftw, gfortran, and GMT, I typed: 
+sudo apt update
+sudo apt --fix-broken install
+sudo apt install vim
+sudo apt install screen
+sudo apt install git-all
+sudo apt-get install curl
+sudo apt install build-essential # (this is a gcc thing)
+sudo apt-get install manpages-dev
+sudo apt-get install gfortran
+sudo apt-get install libfftw3-dev libfftw3-doc
+sudo apt-get install gmt gmt-dcw gmt-gshhg
+Then I downloaded the miniconda python3.7 Linux installer (docs.conda.io/en/latest/miniconda.html)
+I followed the installation instructions for miniconda3
+
+
+Next, I installed ISCE using conda-forge.
+
+When using anything in conda, I got an SSL handshake error due to issues with DOI internet: SSLError(bad handshake: Error... certificate verify failed))). Same SSL handshake issue actually shows up in a GUI when you check out Firefox in the Ubuntu Software Center (Firefox right click, show details). 
+So I added export REQUESTS_CA_BUNDLE='/home/kmaterna/miniconda3/ssl/cacert.pem' to my .bashrc
+Then I added a certificate to the list of accepted certs. 
+For a https website (like conda's software page, https://repo.anaconda.com/pkgs/main/linux-64/current_repodata.json), I can click on the lock next to the URL in firefox, click 'more info', view the certificate, and export as PEM. 
+I manually added the DOIRootCA2 certificate to the end of /home/kmaterna/miniconda3/ssl/cacert.pem
+Note: You may have to do this more than once. If "update conda update" actually does any work, it will re-write the .pem file back to defaults, meaning you have to place the DOI cert into the file again. 
+
+Once it's ready, 
+conda create -n isceenv python=3.7
+conda activate isceenv
+conda install ipython
+
+The moment of truth, 
+conda install -c conda-forge isce2
+
+test installation:
+>ipython
+>>>import isce
+>>>isce.version.release_version (or isce.release_version)
+>>>from stripmapApp import Insar
+
+add $ISCE_HOME to .bashrc by writing: 
+export ISCE_HOME=/home/kmaterna/miniconda3/envs/isceenv/lib/python3.7/site-packages/isce/applications
+export PATH=$PATH:$ISCE_HOME
+# Get access to MDX
+export PATH=$PATH:/home/kmaterna/miniconda3/envs/isceenv/lib/python3.7/site-packages/isce/bin
+
+SUCCESS!!!
+
+To make ISCE run, I had to make a .netrc file in the home directory with my earthdata login and password, for automatic download of SRTM DEM. 
+I also had to use my own scripts to create an orbit directory and aux-cal directory for S1A/B.
+I also had to download my own S1 data and set up my xml files. After that, I tried "topsApp.py topsapp.xml" and it worked! 
+I also had to pip install matplotlib inside isceenv. 
+
+
+
+
+INSTALLING GOOGLE EARTH
+sudo apt install gdebi-core wget
+wget https://dl.google.com/dl/earth/client/current/google-earth-pro-stable_current_amd64.deb
+sudo gdebi google-earth-pro-stable_current_amd64.deb
+
+
+INSTALLING GMTSAR
+sudo apt-get install csh subversion autoconf libtiff5-dev libhdf5-dev
+sudo apt-get install liblapack-dev
+sudo apt-get install libgmt-dev
+cd /usr/local
+git clone --version 5.8 https://github.com/gmtsar/gmtsar
+
+
+NOVEMBER 2020: 
+PYTHON SETUP ON MAIN CONDA ENVIRONMENT: 
+conda install numpy
+conda install scipy
+conda install -c conda-forge obspy
+python -m pip install -U matplotlib
+pip install netCDF4
+pip install h5py
+pip install pandas
+pip install xlrd
+pip install geojson
