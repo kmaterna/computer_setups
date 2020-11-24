@@ -6,8 +6,11 @@ Delete Miniconda3 directory, leaving the Mac python2.7 as the only one left.
 
 Then:
 Download miniconda3 installation script and run it
-Install numpy, scipy, and obspy using conda install
-Install matplotlib using pip (python -m pip install -U matplotlib)
+Install numpy, scipy, and obspy using conda install: 
+conda install numpy
+conda install scipy
+conda install -c conda-forge obspy
+Install matplotlib using pip: python -m pip install -U matplotlib
 others: pip install xlrd
 others: pip install utm
 others: pip install pyrocko
@@ -16,6 +19,8 @@ others: pip install geojson
 others: pip install h5py
 others: pip install netCDF4
 others: pip install pandas
+others: pip install html5lib
+others: pip install beautifulsoup4
 okada_wrapper: pip install okada_wrapper
 
 
