@@ -10,17 +10,18 @@ Install numpy, scipy, and obspy using conda install:
 conda install numpy
 conda install scipy
 conda install -c conda-forge obspy
-Install matplotlib using pip: python -m pip install -U matplotlib
+Install matplotlib: python -m pip install -U matplotlib
 others: pip install xlrd
 others: pip install utm
-others: pip install pyrocko
+others: pip install pyrocko (for insar downsampling)
 others: pip install pyqt5
 others: pip install geojson
 others: pip install h5py
 others: pip install netCDF4
-others: pip install pandas
+others: pip install pandas (generally useful)
 others: pip install html5lib
-others: pip install beautifulsoup4
+others: pip install beautifulsoup4 (for downloading/scraping html data)
+others: pip install pyevtk (for visualizing with paraview)
 okada_wrapper: pip install okada_wrapper
 
 
@@ -35,6 +36,9 @@ cd slippy_gmt; python setup.py install
 
 Later: 
 Install pymc somehow
+
+Environments:
+For each conda env, you'll need to install whatever python packages you need via pip
 
 
 pygmt Conda Environment: 
