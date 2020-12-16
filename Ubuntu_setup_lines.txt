@@ -1,5 +1,5 @@
 January 23, 2020
-Initial configuration of the Dell Ubuntu Box
+Initial configuration of the Dell Ubuntu Box, initially on 18.04
 
 The first thing I had to do was manually remove a set of double-quotes from /etc/apt/sources.list, line 52. The quotes were making it impossible to read the deb stable main line.  I could even see the error message pasted across the top of the GUI when I opened Ubuntu Software Center. 
 So I typed: 
@@ -86,3 +86,7 @@ pip install h5py
 pip install pandas
 pip install xlrd
 pip install geojson
+
+
+DECEMBER 2020:
+By installing Gamma (separate document), I needed to upgrade my entire machine to Ubuntu 20.04. This created a version conflict between GMT5SAR and GMT6 on the machine. I will fix this later.  
