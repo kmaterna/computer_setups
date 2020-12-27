@@ -1,0 +1,21 @@
+useful lines: 
+
+To run unittests: 
+python -m unittest 
+-> runs unittests for anything inside a package (from the top level directory of the package)
+
+To install a source package locally on your machine:
+pip install -e . 
+-> from the root of a package, installs the package locally, by laying an egg in your site-packages. This can be used before you upload a package to pip. 
+
+
+To package and upload a source package to pip: 
+Make sure to change your setup.py to have a new version number. 
+python setup.py sdist 
+python setup.py bdist_wheel (This creates a source distribution and a wheel, easier for end user)
+python -m twine upload dist/* (use pypi username and password)
+Then tag your last commit to github with the same version number. 
+git tag v0.0.1 (or whatever version you want)
+git push
+git push origin v0.0.1
+
