@@ -86,6 +86,7 @@ pip install h5py
 pip install pandas
 pip install xlrd
 pip install geojson
+pip install Tectonic-Utils
 
 
 DECEMBER 2020:
