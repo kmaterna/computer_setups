@@ -10,7 +10,7 @@ pip install -e .
 
 
 To package and upload a source package to pip: 
-Make sure to change your setup.py to have a new version number. 
+Make sure to change your setup.py to have a new version number. Commit these changes. 
 python setup.py sdist 
 python setup.py bdist_wheel (This creates a source distribution and a wheel, easier for end user)
 python -m twine upload dist/* (use pypi username and password)
