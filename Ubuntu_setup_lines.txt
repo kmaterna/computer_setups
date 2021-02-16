@@ -72,7 +72,9 @@ sudo apt-get install csh subversion autoconf libtiff5-dev libhdf5-dev
 sudo apt-get install liblapack-dev
 sudo apt-get install libgmt-dev
 cd /usr/local
-git clone --version 5.8 https://github.com/gmtsar/gmtsar
+# git clone --version 5.8 https://github.com/gmtsar/gmtsar
+git clone --branch 6.0 https://github.com/gmtsar/gmtsar GMTSAR
+follow autoconf/make/install instructions from there. 
 
 
 NOVEMBER 2020: 
@@ -90,4 +92,4 @@ pip install Tectonic-Utils
 
 
 DECEMBER 2020:
-By installing Gamma (separate document), I needed to upgrade my entire machine to Ubuntu 20.04. This created a version conflict between GMT5SAR and GMT6 on the machine. I will fix this later.  
+By installing Gamma (separate document), I needed to upgrade my entire machine to Ubuntu 20.04. This created a version conflict between GMT5SAR and GMT6 on the machine. Fixed this with new clone of GMTSAR 6.0.0. 
