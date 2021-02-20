@@ -18,6 +18,7 @@ sudo apt-get install manpages-dev
 sudo apt-get install gfortran
 sudo apt-get install libfftw3-dev libfftw3-doc
 sudo apt-get install gmt gmt-dcw gmt-gshhg
+sudo apt-get install parallel
 Then I downloaded the miniconda python3.7 Linux installer (docs.conda.io/en/latest/miniconda.html)
 I followed the installation instructions for miniconda3
 sudo apt install tasksel
@@ -59,6 +60,9 @@ I also had to use my own scripts to create an orbit directory and aux-cal direct
 I also had to download my own S1 data and set up my xml files. After that, I tried "topsApp.py topsapp.xml" and it worked! 
 I also had to pip install matplotlib inside isceenv. 
 
+MORE ISCEENV WORK:
+pip install netCDF4
+pip install Tectonic-Utils
 
 
 
