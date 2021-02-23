@@ -19,6 +19,7 @@ sudo apt-get install gfortran
 sudo apt-get install libfftw3-dev libfftw3-doc
 sudo apt-get install gmt gmt-dcw gmt-gshhg
 sudo apt-get install parallel
+sudo apt-get install iotop
 Then I downloaded the miniconda python3.7 Linux installer (docs.conda.io/en/latest/miniconda.html)
 I followed the installation instructions for miniconda3
 sudo apt install tasksel
