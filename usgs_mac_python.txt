@@ -1,0 +1,15 @@
+somehow I have conda and miniconda
+
+conda install numpy
+conda install scipy
+conda install netCDF4
+conda update conda
+conda install gmt --channel conda-forge
+conda create --name pygmt python=3.8 pip numpy pandas xarray packaging
+
+in the pygmt environment: 
+pip install https://github.com/GenericMappingTools/pygmt/archive/master.zip
+pip install Tectonic-Utils
+conda install gmt --channel conda-forge
+conda install scipy, netCDF4
+python -m pip install -U matplotlib
