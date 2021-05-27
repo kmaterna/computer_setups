@@ -1,77 +1,93 @@
-April 13, 2020
-Today I removed my python installation on my Mac and started all over. 
+# April 13, 2020 and May 27, 2021
+# Today I removed my python installation on my Mac and started all over. 
 
-Steps:
-Delete Miniconda3 directory, leaving the Mac python2.7 as the only one left. 
+# Steps:
+# Delete Miniconda3 directory, leaving the Mac python2.7 as the only one left. 
 
-Then:
-Download miniconda3 installation script and run it
-Install numpy, scipy, and obspy using conda install: 
+# Download miniconda3 installation script and run it
+# For the regular research environment: 
+# Install numpy, scipy, and obspy using conda install. 
+# Install matplotlib and other goodies using pip. 
+conda create --name research
+conda activate research
 conda install numpy
 conda install scipy
 conda install -c conda-forge obspy
-Install matplotlib: python -m pip install -U matplotlib
-others: pip install xlrd
-others: pip install utm
-others: pip install pyrocko (for insar downsampling)
-others: pip install pyqt5
-others: pip install geojson
-others: pip install h5py
-others: pip install netCDF4
-others: pip install pandas (generally useful)
-others: pip install html5lib
-others: pip install beautifulsoup4 (for downloading/scraping html data)
-others: pip install pyevtk (for visualizing with paraview)
-others: pip install jupyter
-okada_wrapper: pip install okada_wrapper
+python -m pip install -U matplotlib
+pip install xlrd
+pip install utm
+pip install pyrocko # (for insar downsampling)
+pip install pyqt5
+pip install geojson
+pip install h5py
+pip install netCDF4
+pip install pandas # (generally useful)
+pip install html5lib
+pip install beautifulsoup4 # (for downloading/scraping html data)
+pip install pyevtk # (for visualizing with paraview)
+pip install jupyter
+pip install Tectonic-Utils
+pip install okada_wrapper
 python -m pip install --upgrade pip setuptools wheel
 python -m pip install tqdm
 python -m pip install --user --upgrade twine
 pip install sphinx
 pip install sphinx-rtd-theme
 pip install pyshp
+pip install pymap3d
 
-
-
-kite native installation: 
+# From ~/Documents/Software/ directory: 
+# kite native installation and slippy branch installation: 
+cd ~/Documents/Software
 git clone https://github.com/pyqtgraph/pyqtgraph.git
-cd pyqtgraph; python setup.py install
+cd pyqtgraph; python setup.py install; cd ../
 git clone https://github.com/pyrocko/kite.git
-cd kite; python setup.py install
-
-slippy branch installation:
-cd slippy_gmt; python setup.py install
-
-Later: 
-Install pymc somehow
-
-Environments:
-For each conda env, you'll need to install whatever python packages you need via pip
-My Environments:
--base
--pygmt
--isceenv
--Strain_2D
+cd kite; python setup.py install; cd ../
+cd slippy_gmt/SlipPy; python setup.py install; cd ../
 
 
-pygmt Conda Environment: 
-conda create --name pygmt python=3.6 pip numpy pandas xarray packaging gmt=6.0.0
+# Environments:
+# For each conda env, you'll need to install whatever python packages you need via pip
+# My Environments: (conda env list)
+# -base (not really used for anything)
+# -research (basic stuff)
+# -pygmt
+# -isceenv
+# -Strain_2D
+
+
+# pygmt Conda Environment: 
+conda create --name pygmt python=3.7 pip numpy pandas xarray packaging gmt=6.1.1
 conda activate pygmt
-pip install https://github.com/GenericMappingTools/pygmt/archive/master.zip
-Because I sometimes want to work with both pygmt and kite, I followed the kite instructions for the pygmt environment too. 
-pip install netCDF4, Tectonic-Utils
-To upgrade pygmt: 
-pip install pygmt --upgrade
-To upgrade GMT to 6.1.1: 
-conda update gmt
+conda install pygmt   # wow this works
+# Because I sometimes want to work with both pygmt and kite, I followed kite instructions for pygmt env. 
+pip install netCDF4
+pip install Tectonic-Utils
 pip install pyshp
+# Upgrade shortcuts: 
+# conda install pygmt --upgrade   # (I think)
+# conda update gmt
 
 
-
-Installing ISCE:
+# ISCE conda environment:
 conda create --name isceenv python=3.6 pip numpy pandas xarray
 conda activate isceenv
 conda install -c conda-forge isce2
 pip install matplotlib
-(then ran kite setup.py install and pyqtgraph setup.py install and pip install xlrd/utm/pyrocko/pyqt5/geojson/okada_wrapper, from this env too)
+pip install xlrd
+pip install utm
+pip install pyrocko
+pip install pyqt5
+pip install geojson
+pip install okada_wrapper
+# then manually run kite setup.py install and pyqtgraph setup.py install
 
+
+# Strain_2D conda environment:
+# go to Strain_2D directory: 
+conda env create -f requirements.yml
+python setup.py install
+
+
+# Later: 
+# Install pymc somehow

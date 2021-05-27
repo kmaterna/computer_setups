@@ -19,3 +19,5 @@ git tag v0.0.1 (or whatever version you want)
 git push
 git push origin v0.0.1
 
+To list your conda environments:
+conda env list
