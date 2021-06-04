@@ -60,6 +60,7 @@ cd slippy_gmt/SlipPy; python setup.py install; cd ../
 conda create --name pygmt python=3.7 pip numpy pandas xarray scipy packaging gmt=6.1.1
 conda activate pygmt
 conda install pygmt   # wow this works
+conda install -c conda-forge obspy
 # Because I sometimes want to work with both pygmt and kite, I followed kite instructions for pygmt env. 
 pip install netCDF4
 pip install Tectonic-Utils
