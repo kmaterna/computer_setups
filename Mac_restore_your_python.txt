@@ -35,6 +35,7 @@ pip install sphinx
 pip install sphinx-rtd-theme
 pip install pyshp
 pip install pymap3d
+pip install -U scikit-learn
 
 # From ~/Documents/Software/ directory: 
 # kite native installation and slippy branch installation: 
@@ -73,6 +74,7 @@ pip install h5py
 pip install jupyter
 pip install geojson
 pip install openpyxl
+pip install -U scikit-learn
 slippy: python setup.py install
 # Upgrade shortcuts: 
 # conda install pygmt --upgrade   # (I think)
