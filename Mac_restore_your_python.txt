@@ -26,7 +26,7 @@ pip install html5lib
 pip install beautifulsoup4 # (for downloading/scraping html data)
 pip install pyevtk # (for visualizing with paraview)
 pip install jupyter
-pip install Tectonic-Utils
+# pip install Tectonic-Utils # NOT DOING: this one with local install "pip install -e ."
 pip install okada_wrapper
 python -m pip install --upgrade pip setuptools wheel
 python -m pip install tqdm
@@ -64,7 +64,7 @@ conda install pygmt   # wow this works
 conda install -c conda-forge obspy
 # Because I sometimes want to work with both pygmt and kite, I followed kite instructions for pygmt env. 
 pip install netCDF4
-pip install Tectonic-Utils
+# pip install Tectonic-Utils # NOT DOING: this one with local install "pip install -e ."
 pip install pyshp
 python -m pip install -U matplotlib
 pip install xlrd
@@ -100,6 +100,7 @@ pip install netCDF4
 # go to Strain_2D directory: 
 conda env create -f requirements.yml
 python setup.py install
+manually delete Tectonic-Utils, then install with local install "pip install -e ."
 
 
 # Later: 
