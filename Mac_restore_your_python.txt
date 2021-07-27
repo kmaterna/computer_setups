@@ -36,6 +36,7 @@ pip install sphinx-rtd-theme
 pip install pyshp
 pip install pymap3d
 pip install -U scikit-learn
+In CGM directory: python setup.py install 
 
 # From ~/Documents/Software/ directory: 
 # kite native installation and slippy branch installation: 
