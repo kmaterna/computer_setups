@@ -78,7 +78,7 @@ pip install openpyxl
 pip install -U scikit-learn
 slippy: python setup.py install
 # Upgrade shortcuts: 
-# conda install pygmt --upgrade   # (I think)
+# conda install pygmt --update-all    # (done sept 2021)
 # conda update gmt
 
 
