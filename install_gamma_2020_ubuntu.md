@@ -33,3 +33,7 @@ To avoid issues, I would recommend moving to 20.04 before beginning and then jus
 
 #### 7. Test the installation
 1. disras (and you should get output)
+
+
+#### Later Questions and Notes
+Do you merge TOPS subswaths? Can SLC_mosaic_S1_TOPS be used?
