@@ -34,15 +34,16 @@ For a https website (like conda's software page, https://repo.anaconda.com/pkgs/
 I manually added the DOIRootCA2 certificate to the end of /home/kmaterna/miniconda3/ssl/cacert.pem
 Note: You may have to do this more than once. If "update conda update" actually does any work, it will re-write the .pem file back to defaults, meaning you have to place the DOI cert into the file again. 
 
-Once it's ready, 
+Then: 
 conda create -n isceenv python=3.7
 conda activate isceenv
 conda install ipython
-
-The moment of truth, 
+pip install netCDF4
+pip install Tectonic-Utils
+python -m pip install -U matplotlib
 conda install -c conda-forge isce2
 
-test installation:
+test isce installation:
 >ipython
 >>>import isce
 >>>isce.version.release_version (or isce.release_version)
@@ -54,16 +55,14 @@ export PATH=$PATH:$ISCE_HOME
 # Get access to MDX
 export PATH=$PATH:/home/kmaterna/miniconda3/envs/isceenv/lib/python3.7/site-packages/isce/bin
 
-SUCCESS!!!
-
+Continuing the ISCE setup: 
 To make ISCE run, I had to make a .netrc file in the home directory with my earthdata login and password, for automatic download of SRTM DEM. 
 I also had to use my own scripts to create an orbit directory and aux-cal directory for S1A/B.
 I also had to download my own S1 data and set up my xml files. After that, I tried "topsApp.py topsapp.xml" and it worked! 
-I also had to pip install matplotlib inside isceenv. 
 
-MORE ISCEENV WORK:
-pip install netCDF4
-pip install Tectonic-Utils
+
+11/2/2021: Upgrading isce:
+I was never able to do this.  I blew up the environment and started over. 
 
 
 
