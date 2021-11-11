@@ -42,6 +42,7 @@ pip install pyshp
 pip install pymap3d
 pip install -U scikit-learn
 In CGM directory: python setup.py install 
+pip install folium
 conda install ipykernel
 
 # From ~/Documents/Software/ directory: 
