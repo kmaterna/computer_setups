@@ -62,7 +62,7 @@ I also had to download my own S1 data and set up my xml files. After that, I tri
 
 
 11/2/2021: Upgrading isce:
-I was never able to do this.  I blew up the environment and started over. 
+I was never able to do this.  I blew up the isceenv environment and started over. 
 
 
 
@@ -78,8 +78,10 @@ sudo apt-get install liblapack-dev
 sudo apt-get install libgmt-dev
 cd /usr/local
 # git clone --version 5.8 https://github.com/gmtsar/gmtsar
-git clone --branch 6.0 https://github.com/gmtsar/gmtsar GMTSAR
+# git clone --branch 6.0 https://github.com/gmtsar/gmtsar GMTSAR
 follow autoconf/make/install instructions from there. 
+# when I upgraded the software to the master branch instead of 6.0 or 6.1, I did this: 
+git clone https://github.com/gmtsar/gmtsar GMTSAR (last done 12/13/21)
 
 
 NOVEMBER 2020: 
