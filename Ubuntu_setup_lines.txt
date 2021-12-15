@@ -40,6 +40,7 @@ conda activate isceenv
 conda install ipython
 pip install netCDF4
 pip install Tectonic-Utils
+pip install shapely
 python -m pip install -U matplotlib
 conda install -c conda-forge isce2
 
@@ -55,14 +56,17 @@ export PATH=$PATH:$ISCE_HOME
 # Get access to MDX
 export PATH=$PATH:/home/kmaterna/miniconda3/envs/isceenv/lib/python3.7/site-packages/isce/bin
 
+for S1 STACK PROCESSING: 
+export PATH=$PATH:/home/kmaterna/miniconda3/envs/isceenv/share/isce2/topsStack
+
+
 Continuing the ISCE setup: 
 To make ISCE run, I had to make a .netrc file in the home directory with my earthdata login and password, for automatic download of SRTM DEM. 
 I also had to use my own scripts to create an orbit directory and aux-cal directory for S1A/B.
 I also had to download my own S1 data and set up my xml files. After that, I tried "topsApp.py topsapp.xml" and it worked! 
 
-
-11/2/2021: Upgrading isce:
-I was never able to do this.  I blew up the isceenv environment and started over. 
+Upgrading isce:
+I was never able to do this.  I blew up the isceenv environment and started over. Last done on 11/2/2021.  
 
 
 
