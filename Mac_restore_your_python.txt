@@ -101,6 +101,7 @@ pip install pyqt5
 pip install geojson
 pip install okada_wrapper
 pip install netCDF4
+pip install Tectonic-Utils
 # then manually run kite setup.py install and pyqtgraph setup.py install
 
 
