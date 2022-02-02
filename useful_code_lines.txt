@@ -21,3 +21,12 @@ git push origin v0.0.1
 
 To list your conda environments:
 conda env list
+
+
+To import a python package from somewhere local, not necessarily on your Python path: 
+# One example. 
+# The location _Project_Code/ does have an __init__.py
+>> import sys
+>> sys.path.append("../../../_Project_Code/");   # add 'injection_analysis' to path
+>> import injection_analysis
+
