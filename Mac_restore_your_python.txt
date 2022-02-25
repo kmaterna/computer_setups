@@ -105,11 +105,12 @@ pip install Tectonic-Utils
 # then manually run kite setup.py install and pyqtgraph setup.py install
 
 
-# MINTPY CONDA ENVIRONMENT
-conda create --name mintpy python=3.6 pip numpy pandas xarray
-conda config --set channel_priority strict 
-conda install -c conda-forge mintpy   (took 40 minutes)
-pip install netCDF4
+# MINTPY CONDA ENVIRONMENT: Dev version instead of conda version, which has some issues
+In Documents/Software: git clone https://github.com/insarlab/MintPy.git
+conda env create --name mintpy -f ~/Documents/Software/MintPy/docs/environment.yml
+conda activate mintpy
+python setup.py install    # local install, for the bleeding edge version
+pip install netCDF
 
 
 # Strain_2D conda environment:
