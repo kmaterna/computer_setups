@@ -5,14 +5,15 @@
 # Delete Miniconda3 directory, leaving the Mac python2.7 as the only one left. 
 
 In base environment: 
-conda install nb_conda_kernels
+conda install nb_conda_kernels   # if you want to run Jupyter notebooks from different conda envs in the future
 pip install jupyter
 
 
-# Download miniconda3 installation script and run it
-# For the regular research environment: 
-# Install numpy, scipy, and obspy using conda install. 
-# Install matplotlib and other goodies using pip. 
+# First, download miniconda3 installation script from the Miniconda webite and run it
+
+
+# Next, build a "research" environment: 
+# Install the basics and some research goodies using conda/pip
 conda create --name research
 conda activate research
 conda install numpy
@@ -31,20 +32,19 @@ pip install html5lib
 pip install beautifulsoup4 # (for downloading/scraping html data)
 pip install pyevtk # (for visualizing with paraview)
 pip install jupyter
-# pip install Tectonic-Utils # NOT DOING: this one with local install "pip install -e ."
-pip install okada_wrapper
+pip install okada_wrapper   # for fault modeling
 python -m pip install --upgrade pip setuptools wheel
 python -m pip install tqdm
 python -m pip install --user --upgrade twine
 pip install sphinx
 pip install sphinx-rtd-theme
-pip install pyshp
+pip install pyshp   # for arc shapefiles
 pip install pymap3d
 pip install -U scikit-learn
-In CGM directory: python setup.py install 
-pip install folium
+pip install folium   # for interactive maps
 conda install ipykernel
 
+# Geodesy specific installations for "research" environment:
 # From ~/Documents/Software/ directory: 
 # kite native installation and slippy branch installation: 
 cd ~/Documents/Software
@@ -53,9 +53,11 @@ cd pyqtgraph; python setup.py install; cd ../
 git clone https://github.com/pyrocko/kite.git
 cd kite; python setup.py install; cd ../
 cd slippy_gmt/SlipPy; python setup.py install; cd ../
+In CGM directory: python setup.py install 
+In Tectonic-Utils directory: pip install -e .
 
 
-# Environments:
+# Other Environments:
 # For each conda env, you'll need to install whatever python packages you need via pip
 # My Environments: (conda env list)
 # -base (not really used for anything)
@@ -63,6 +65,7 @@ cd slippy_gmt/SlipPy; python setup.py install; cd ../
 # -pygmt
 # -isceenv
 # -Strain_2D
+# -mintpy
 
 
 # pygmt Conda Environment: 
@@ -72,7 +75,6 @@ conda install pygmt   # wow this works
 conda install -c conda-forge obspy
 # Because I sometimes want to work with both pygmt and kite, I followed kite instructions for pygmt env. 
 pip install netCDF4
-# pip install Tectonic-Utils # NOT DOING: this one with local install "pip install -e ."
 pip install pyshp
 python -m pip install -U matplotlib
 pip install xlrd
@@ -84,6 +86,7 @@ pip install geojson
 pip install openpyxl
 pip install -U scikit-learn
 slippy: python setup.py install
+Tectonic-Utils: pip install -e .
 # Upgrade shortcuts: 
 # conda install pygmt --update-all    # (done sept 2021)
 # conda update gmt
@@ -109,7 +112,7 @@ pip install Tectonic-Utils
 In Documents/Software: git clone https://github.com/insarlab/MintPy.git
 conda env create --name mintpy -f ~/Documents/Software/MintPy/docs/environment.yml
 conda activate mintpy
-python setup.py install    # local install, for the bleeding edge version
+In ~/Software/MintPy: python setup.py install    # local install, for the bleeding edge version
 pip install netCDF
 
 
@@ -121,5 +124,3 @@ manually delete Tectonic-Utils, then install with local install "pip install -e 
 conda install pygmt --update-all (Feb 2022)
 
 
-# Later: 
-# Install pymc somehow
