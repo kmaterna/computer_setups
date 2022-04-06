@@ -90,7 +90,9 @@ cgm_readers: python setup.py install
 Tectonic-Utils: pip install -e .
 # Upgrade shortcuts: 
 # conda install pygmt --update-all    # (done sept 2021)
+# conda install pygmt=0.5.0   # (done april 2022)
 # conda update gmt
+WARNING: Newer versions of PYGMT require python3.9.  If I need bigger versions of things past 2022, I might have to blow up this environment and start over with python3.9.
 
 
 # ISCE conda environment:
