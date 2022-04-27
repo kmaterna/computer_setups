@@ -127,5 +127,6 @@ python setup.py install
 manually delete Tectonic-Utils, then install with local install "pip install -e ."
 conda install pygmt --update-all (Feb 2022)
 pip install shapely
-
+pip install corner
+pip install arviz
 
