@@ -108,6 +108,7 @@ pip install geojson
 pip install okada_wrapper
 pip install netCDF4
 pip install Tectonic-Utils
+pip install pyshp
 # then manually run kite setup.py install and pyqtgraph setup.py install
 # actually, I was never able to update ISCE2 through package managers. on a different linux system, I blew up the environment and re-installed in nov 2021
 
