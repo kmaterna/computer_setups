@@ -8,6 +8,10 @@ To install a source package locally on your machine:
 pip install -e . 
 -> from the root of a package, installs the package locally, by laying an egg in your site-packages. This can be used before you upload a package to pip. 
 
+To run a Python code driver.py with performance tracking:
+```python -m cProfile -o example2.prof driver.py```
+Then you can use ```python -m pstats example2.prof``` to delve into the performance statistics
+
 
 To package and upload a source package to pip: 
 Make sure to change your setup.py to have a new version number. Commit these changes. 
