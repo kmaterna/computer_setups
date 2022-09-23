@@ -87,6 +87,7 @@ pip install geojson
 pip install openpyxl
 pip install -U scikit-learn
 pip install tornado
+conda install -c conda-forge cutde 
 slippy: python setup.py install
 cgm_readers: python setup.py install
 Tectonic-Utils: pip install -e .
