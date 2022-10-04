@@ -28,6 +28,7 @@ pip install geojson
 pip install h5py
 pip install netCDF4
 pip install pandas # (generally useful)
+pip install openpyxl
 pip install html5lib
 pip install beautifulsoup4 # (for downloading/scraping html data)
 pip install pyevtk # (for visualizing with paraview)
