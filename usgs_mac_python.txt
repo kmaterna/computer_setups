@@ -1,25 +1,33 @@
-somehow I have conda and miniconda
+Download and run miniconda installer https://docs.conda.io/en/latest/miniconda.html
 
-general (optional): 
+Make a general environment (optional): 
 conda install numpy
 conda install scipy
 conda install netCDF4
 conda update conda
 conda install gmt --channel conda-forge
 
-Create environment for pygmt/gmt/matlab.engine (NOT NECESSARY IN THE END): 
-conda create --name strain python=3.7 pip numpy pandas xarray packaging
-in the strain environment: 
-conda install scipy
-conda install netCDF4
-python -m pip install -U matplotlib
-conda install gmt --channel conda-forge
-pip install https://github.com/GenericMappingTools/pygmt/archive/master.zip --no-use-pep517   // stupid bug. workaround. 
-pip install Tectonic-Utils
-cd /Applications/MATLAB_R2019b.app/extern/engines/python
-python setup.py install
 
-then, from anywhere, you can: python
-import matlab.engine
-eng = matlab.engine.start_matlab()
+For strain_2D environment, go into the repo and type:
+conda env create -f requirements.yml
+conda activate Strain_2D
+python setup.py install 
+pip install Tectonic-Utils
+
+# Create environment for pygmt/gmt/matlab.engine (NOT NECESSARY IN THE END): 
+# conda create --name strain python=3.7 pip numpy pandas xarray packaging
+# in the strain environment: 
+# conda install scipy
+# conda install netCDF4
+# python -m pip install -U matplotlib
+# conda install gmt --channel conda-forge
+# pip install https://github.com/GenericMappingTools/pygmt/archive/master.zip --no-use-pep517   // stupid bug. workaround. 
+# pip install Tectonic-Utils
+# cd /Applications/MATLAB_R2019b.app/extern/engines/python
+# python setup.py install
+# then, from anywhere, you can: python
+# import matlab.engine
+# eng = matlab.engine.start_matlab()
+
+
 
