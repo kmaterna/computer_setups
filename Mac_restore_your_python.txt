@@ -44,6 +44,7 @@ pip install pymap3d
 pip install -U scikit-learn
 pip install folium   # for interactive maps
 conda install ipykernel
+pip install earthscope-cli
 
 # Geodesy specific installations for "research" environment:
 # From ~/Documents/Software/ directory: 
@@ -89,6 +90,7 @@ pip install openpyxl
 pip install -U scikit-learn
 pip install tornado
 pip install okada_wrapper 
+pip install earthscope-cli
 conda install -c conda-forge cutde 
 slippy: python setup.py install
 cgm_readers: python setup.py install
