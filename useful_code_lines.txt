@@ -34,3 +34,7 @@ To import a python package from somewhere local, not necessarily on your Python 
 >> sys.path.append("../../../_Project_Code/");   # add 'injection_analysis' to path
 >> import injection_analysis
 
+
+To look for a python package everywhere in your computer recursively: 
+(base) Kathryns-MacBook-Pro-2:B_Research kmaterna$ grep -r --include=*.py 'downsample_gps_ts.' .
+
