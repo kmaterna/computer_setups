@@ -39,6 +39,7 @@ python -m pip install tqdm
 python -m pip install --user --upgrade twine
 pip install sphinx
 pip install sphinx-rtd-theme
+pip install sphinx-toolbox
 pip install pyshp   # for arc shapefiles
 pip install pymap3d
 pip install -U scikit-learn
@@ -102,6 +103,15 @@ Elastic_stresses_py: python setup.py install
 # conda update gmt
 # conda upgrade -n base conda   # please do occasionally
 conda install python=3.9  # (done sept 2022, upgraded to Python 3.9 for typing.TypedDict)
+pip install sphinx
+pip install sphinx-rtd-theme
+pip install sphinx-toolbox
+pip install pyshp 
+pip install xlrd
+pip install h5py
+pip install pyrocko
+
+
 
 
 # ISCE conda environment:
