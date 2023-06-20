@@ -46,6 +46,7 @@ pip install -U scikit-learn
 pip install folium   # for interactive maps
 conda install ipykernel
 pip install earthscope-cli
+conda install gmsh
 
 # Geodesy specific installations for "research" environment:
 # From ~/Documents/Software/ directory: 
