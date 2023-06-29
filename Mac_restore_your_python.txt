@@ -113,6 +113,8 @@ pip install h5py
 pip install pyrocko
 pip install shapely
 pip install fastkml
+pip install tornado
+pip install jupyterlab
 
 
 
