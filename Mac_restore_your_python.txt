@@ -115,6 +115,8 @@ pip install shapely
 pip install fastkml
 pip install tornado
 pip install jupyterlab
+pip install mplcursors
+pip install seaborn
 
 
 

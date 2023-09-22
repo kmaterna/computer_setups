@@ -44,6 +44,8 @@ pip install Tectonic-Utils
 pip install shapely
 python -m pip install -U matplotlib
 conda install -c conda-forge isce2
+conda install -n base -c conda-forge mamba
+mamba install -c conda-forge mintpy
 
 test isce installation:
 >ipython
