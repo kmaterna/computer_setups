@@ -35,18 +35,23 @@ For a https website (like conda's software page, https://repo.anaconda.com/pkgs/
 I manually added the DOIRootCA2 certificate to the end of /home/kmaterna/miniconda3/ssl/cacert.pem
 Note: You may have to do this more than once. If "update conda update" actually does any work, it will re-write the .pem file back to defaults, meaning you have to place the DOI cert into the file again. 
 
+# Install mamba in base env
+conda install -n base -c conda-forge mamba
+
 Then: 
 conda create -n isceenv python=3.7
 conda activate isceenv
+conda install matplotlib
 conda install ipython
+conda install -c conda-forge isce2
+conda install jupyterlab
+mamba install -c conda-forge mintpy
+conda install -c conda-forge shapely
 pip install netCDF4
 pip install Tectonic-Utils
-pip install shapely
-python -m pip install -U matplotlib
-conda install -c conda-forge isce2
-conda install -n base -c conda-forge mamba
-mamba install -c conda-forge mintpy
-pip install jupyterlab
+
+
+
 
 test isce installation:
 >ipython
