@@ -81,7 +81,7 @@ conda install -c conda-forge obspy
 pip install netCDF4
 pip install pyshp
 python -m pip install -U matplotlib
-pip install --upgrade matplotlib  # sept 2022
+pip install --upgrade matplotlib  # nov 2023
 pip install xlrd
 pip install utm
 pip install pyrocko
@@ -94,10 +94,13 @@ pip install tornado
 pip install okada_wrapper 
 pip install earthscope-cli
 conda install -c conda-forge cutde 
+
 slippy: python setup.py install
 cgm_readers: python setup.py install
 Tectonic-Utils: pip install -e .
 Elastic_stresses_py: python setup.py install
+gnss_timeseries_viewers: pip install . 
+
 # Upgrade shortcuts: 
 # conda install pygmt --update-all    # (done sept 2021)
 # conda install pygmt=0.5.0   # (done april 2022)
@@ -117,6 +120,8 @@ pip install tornado
 pip install jupyterlab
 pip install mplcursors
 pip install seaborn
+pip install ruff
+pip install tqdm
 
 
 

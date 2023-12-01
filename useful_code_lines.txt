@@ -26,6 +26,9 @@ git push origin v0.0.1
 To list your conda environments:
 conda env list
 
+To delete a conda environment:
+conda env remote ...
+
 
 To import a python package from somewhere local, not necessarily on your Python path: 
 # One example. 
