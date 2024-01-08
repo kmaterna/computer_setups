@@ -94,6 +94,7 @@ pip install tornado
 pip install okada_wrapper 
 pip install earthscope-cli
 conda install -c conda-forge cutde 
+pip install sentinelhub
 
 slippy: python setup.py install
 cgm_readers: python setup.py install
