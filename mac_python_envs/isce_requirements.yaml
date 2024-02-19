@@ -1,0 +1,38 @@
+# create environment : conda env create -f isce_requirements.yaml
+# update dependencies: conda env update -f isce_requirements.yaml
+# remove environment : conda env remove -n isceenv
+# enter  environment : conda activate isccenv
+# exit   environment : conda deactivate
+name: isceenv
+channels:
+ - conda-forge
+ - anaconda
+ - defaults
+dependencies:
+ - python>=3
+ - matplotlib
+ - numpy
+ - scipy
+ - xarray
+ - pip
+ - pandas
+ - xarray
+ - xlrd
+ - utm
+ - geojson
+ - jupyterlab
+ - pyshp
+ - netCDF4
+ - cython
+ - gdal
+ - h5py
+ - libgdal
+ - pytest
+ - fftw
+ - basemap
+ - scons
+ - opencv 
+ - pip:
+    - Tectonic-Utils
+    - pyrocko
+    - pyqt5

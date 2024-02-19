@@ -1,0 +1,85 @@
+# April 13, 2020 and May 27, 2021
+# Today I removed my python installation on my Mac and started all over. 
+
+# Steps:
+# Delete Miniconda3 directory, leaving the Mac python2.7 as the only one left. 
+# Download miniconda3 installation script from the Miniconda webite and run it
+
+
+In base environment: 
+conda install nb_conda_kernels   # if you want to run Jupyter notebooks from different conda envs in the future
+pip install jupyter
+
+# My Environments: (conda env list)
+# -base (not really used for anything)
+# -research (basic stuff)
+# -pygmt
+# -isceenv
+# -Strain_2D
+# -mintpy
+
+
+# Build a "research" environment: The basics and some research goodies using conda/pip
+conda env create -f research_requirements.yaml 
+OUTSIDE Requirements.yaml: 
+pip install okada_wrapper   # for fault modeling
+# Geodesy specific installations for "research" environment:
+# From ~/Documents/Software/ directory: 
+# kite native installation and slippy branch installation: 
+cd ~/Documents/Software
+git clone https://github.com/pyqtgraph/pyqtgraph.git
+cd pyqtgraph; python setup.py install; cd ../
+git clone https://github.com/pyrocko/kite.git
+cd kite; python setup.py install; cd ../
+cd slippy_gmt/SlipPy; python setup.py install; cd ../
+In CGM directory: python setup.py install 
+
+
+# pygmt Conda Environment: 
+conda create env -f pygmt_requirements.yaml
+conda activate pygmt
+In slippy: python setup.py install
+In cgm_readers: python setup.py install
+In Elastic_stresses_py: pip install . 
+In gnss_timeseries_viewers: pip install . 
+also kite
+# Upgrade shortcuts: 
+# conda install pygmt=0.5.0   # (done april 2022)
+# conda update gmt
+# conda upgrade -n base conda   # please do occasionally
+# pip install --upgrade matplotlib  # nov 2023
+
+
+
+# ISCE conda environment:
+conda env create -f isce_requirements.yaml
+conda activate isceenv
+# then manually run kite setup.py install and pyqtgraph setup.py install
+conda install conda-forge::isce2   # ISN'T WORKING YET
+# Note: I was never able to update ISCE2 through package managers. on a different linux system, I blew up the environment and re-installed it
+
+
+# MINTPY CONDA ENVIRONMENT: Dev version instead of conda version, which has some issues
+In Documents/Software: git clone https://github.com/insarlab/MintPy.git
+conda env create --name mintpy -f ~/Documents/Software/MintPy/docs/environment.yml
+conda activate mintpy
+In ~/Software/MintPy: python setup.py install    # local install, for the bleeding edge version
+pip install netCDF
+
+
+# Strain_2D conda environment:
+# go to Strain_2D directory: 
+conda env create -f requirements.yml
+pip install . 
+pip install Tectonic-Utils
+pip install shapely
+pip install corner
+pip install arviz
+
+
+# elastic_py environment:
+# Go to Elastic_Stresses_py directory:
+conda env create -f requirements.yml
+pip install . 
+pip install okada_wrapper
+

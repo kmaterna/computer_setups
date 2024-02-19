@@ -1,0 +1,50 @@
+# create environment : conda env create -f pygmt_requirements.yaml
+# update dependencies: conda env update -f pygmt_requirements.yaml
+# remove environment : conda env remove -n pygmt
+# enter  environment : conda activate pygmt
+# exit   environment : conda deactivate
+name: pygmt
+channels:
+ - conda-forge
+ - anaconda
+ - defaults
+dependencies:
+ - python>=3
+ - matplotlib
+ - numpy
+ - scipy
+ - pandas
+ - pip
+ - xarray
+ - scipy
+ - packaging
+ - gmt
+ - pygmt
+ - obspy
+ - netCDF4
+ - pyshp
+ - xlrd
+ - utm
+ - h5py
+ - jupyter
+ - jupyterlab
+ - mplcursors
+ - seaborn
+ - ruff
+ - tqdm
+ - geojson
+ - openpyxl
+ - scikit-learn
+ - tornado
+ - sphinx
+ - sphinx-rtd-theme
+ - sphinx-toolbox
+ - shapely
+ - fastkml
+ - cutde
+ - pip:
+   - pyrocko
+   - earthscope-cli
+   - okada_wrapper
+   - sentinelhub
+   - Tectonic-Utils

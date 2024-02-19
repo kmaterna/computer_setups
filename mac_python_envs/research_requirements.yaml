@@ -1,0 +1,51 @@
+# create environment : conda env create -f research_requirements.yaml
+# update dependencies: conda env update -f research_requirements.yaml
+# remove environment : conda env remove -n research
+# enter  environment : conda activate research
+# exit   environment : conda deactivate
+name: research
+channels:
+ - conda-forge
+ - anaconda
+ - defaults
+dependencies:
+ - python>=3
+ - matplotlib
+ - numpy
+ - scipy
+ - obspy
+ - xarray
+ - pandas
+ - gmt
+ - pygmt
+ - pip
+ - jupyter
+ - xlrd
+ - utm
+ - geojson
+ - h5py
+ - netCDF4
+ - openpyxl
+ - html5lib
+ - beautifulsoup4
+ - pyevtk
+ - setuptools
+ - wheel
+ - tqdm
+ - twine
+ - sphinx
+ - sphinx-rtd-theme
+ - sphinx-toolbox
+ - pyshp
+ - pymap3d
+ - scikit-learn
+ - folium
+ - ipykernel
+ - gmsh
+ - pip: 
+   - pyrocko
+   - Tectonic-Utils
+   - pyqt5
+   - earthscope-cli
+
+
