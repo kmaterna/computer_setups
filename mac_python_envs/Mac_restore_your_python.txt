@@ -9,6 +9,9 @@
 In base environment: 
 conda install nb_conda_kernels   # if you want to run Jupyter notebooks from different conda envs in the future
 pip install jupyter
+brew install --cask jupyter-notebook-viewer
+brew install --cask --no-quarantine syntax-highlight
+
 
 # My Environments: (conda env list)
 # -base (not really used for anything)
