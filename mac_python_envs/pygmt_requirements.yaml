@@ -40,6 +40,7 @@ dependencies:
  - sphinx-rtd-theme
  - sphinx-toolbox
  - shapely
+ - simplekml
  - fastkml
  - cutde
  - pip:
