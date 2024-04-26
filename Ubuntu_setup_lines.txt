@@ -1,3 +1,43 @@
+April 2024
+Initial configuration of Dell Ubuntu Box
+
+
+
+sudo apt update
+sudo apt --fix-broken install
+sudo apt install vim
+sudo apt install screen
+sudo apt install git-all
+sudo apt-get install curl
+sudo apt install build-essential # (this is a gcc thing)
+sudo apt-get install manpages-dev
+sudo apt-get install gfortran
+sudo apt-get install libfftw3-dev libfftw3-doc
+sudo apt-get install gmt gmt-dcw gmt-gshhg
+sudo apt-get install parallel
+sudo apt-get install iotop
+sudo apt install tasksel
+
+I downloaded the miniconda Linux installer and followed the installation instructions for miniconda3
+
+sudo snap install pycharm-community --classic  # install pycharm community version
+
+# Install mamba in base env
+conda install -n base -c conda-forge mamba
+
+
+Then, based on the mac environment for isce2, let's try this in your base environment: 
+conda env create -f isce_requirements.yaml  # Creates environment, now in Python 3.11
+conda activate isceenv
+conda install conda-forge::isce2
+It worked! 
+
+
+
+
+
+
+
 January 23, 2020
 Initial configuration of the Dell Ubuntu Box, initially on 18.04
 
