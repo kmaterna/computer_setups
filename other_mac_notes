@@ -1,0 +1,4 @@
+Use homebrew
+
+brew install aria2
+gcc: you have to override the mac default one with a new installation from homebrew

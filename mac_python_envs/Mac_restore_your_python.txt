@@ -51,7 +51,7 @@ also kite
 # conda update gmt
 # conda upgrade -n base conda   # please do occasionally
 # pip install --upgrade matplotlib  # nov 2023
-
+conda install -c conda-forge asf_search
 
 
 # ISCE conda environment:
