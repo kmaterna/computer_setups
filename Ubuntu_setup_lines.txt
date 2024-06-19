@@ -2,7 +2,6 @@ April 2024
 Initial configuration of Dell Ubuntu Box
 
 
-
 sudo apt update
 sudo apt --fix-broken install
 sudo apt install vim
@@ -17,6 +16,7 @@ sudo apt-get install gmt gmt-dcw gmt-gshhg
 sudo apt-get install parallel
 sudo apt-get install iotop
 sudo apt install tasksel
+sudo apt install aria2
 
 I downloaded the miniconda Linux installer and followed the installation instructions for miniconda3
 
@@ -30,6 +30,7 @@ Then, based on the mac environment for isce2, let's try this in your base enviro
 conda env create -f isce_requirements.yaml  # Creates environment, now in Python 3.11
 conda activate isceenv
 conda install conda-forge::isce2
+conda install pygmt
 It worked! 
 
 

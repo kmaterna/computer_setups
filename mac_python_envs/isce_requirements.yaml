@@ -36,3 +36,4 @@ dependencies:
     - Tectonic-Utils
     - pyrocko
     - pyqt5
+    - asf_search

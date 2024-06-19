@@ -49,3 +49,4 @@ dependencies:
    - okada_wrapper
    - sentinelhub
    - Tectonic-Utils
+   - asf_search
