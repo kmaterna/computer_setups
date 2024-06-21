@@ -31,7 +31,16 @@ conda env create -f isce_requirements.yaml  # Creates environment, now in Python
 conda activate isceenv
 conda install conda-forge::isce2
 conda install pygmt
-It worked! 
+
+Then, add a few user-defined paths to your bashrc:
+ISCE_HOME=/......./miniconda3/envs/isceenv/lib/python3.11/site-packages/isce/applications
+export PATH=$PATH:$ISCE_HOME
+export PATH=$PATH:/......../miniconda3/envs/isceenv/lib/python3.11/site-packages/isce/bin
+# ISCE CONTRIB
+export ISCE_STACK=/......../miniconda3/envs/isceenv/share/isce2/
+export PATH=$PATH:/......../miniconda3/envs/isceenv/share/isce2/topsStack
+export PYTHONPATH=${PYTHONPATH}:${ISCE_STACK}
+
 
 
 
