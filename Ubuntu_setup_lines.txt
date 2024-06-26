@@ -22,6 +22,12 @@ I downloaded the miniconda Linux installer and followed the installation instruc
 
 sudo snap install pycharm-community --classic  # install pycharm community version
 
+In my base environment:
+sudo apt-get install csh subversion autoconf libtiff5-dev libhdf5-dev wget
+sudo apt-get install liblapack-dev
+sudo apt-get install libgmt-dev
+
+
 # Install mamba in base env
 conda install -n base -c conda-forge mamba
 
