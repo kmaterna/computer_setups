@@ -42,6 +42,8 @@ dependencies:
  - folium
  - ipykernel
  - gmsh
+ - numba
+ - pyarrow
  - pip: 
    - pyrocko
    - Tectonic-Utils
