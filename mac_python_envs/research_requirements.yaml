@@ -49,5 +49,6 @@ dependencies:
    - Tectonic-Utils
    - pyqt5
    - earthscope-cli
+   - hectorp
 
 

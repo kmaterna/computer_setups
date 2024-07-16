@@ -36,6 +36,7 @@ git clone https://github.com/pyrocko/kite.git
 cd kite; python setup.py install; cd ../
 cd slippy_gmt/SlipPy; python setup.py install; cd ../
 In CGM directory: python setup.py install 
+In gnss_timeseries_viewers directory: pip install . 
 
 
 # pygmt Conda Environment: 
