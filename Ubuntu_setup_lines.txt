@@ -17,6 +17,7 @@ sudo apt-get install parallel
 sudo apt-get install iotop
 sudo apt install tasksel
 sudo apt install aria2
+sudo apt install openssh-server
 
 I downloaded the miniconda Linux installer and followed the installation instructions for miniconda3
 
@@ -26,6 +27,8 @@ In my base environment:
 sudo apt-get install csh subversion autoconf libtiff5-dev libhdf5-dev wget
 sudo apt-get install liblapack-dev
 sudo apt-get install libgmt-dev
+
+# To configure the workstation as a server, I installed openssh-server with apt, then used sudo vim /etc/ssh/sshd_config to change to "PasswordAuthentication yes" and restarted the server with "sudo service ssh restart". I then copied a previously created public key from a local machine (from ssh-keygen) using ssh-copy-id user@IP_address with the password. Then I returned to change "PasswordAuthentication no" for safety. After these steps, the remote access through scp and ssh works. 
 
 
 # Install mamba in base env
