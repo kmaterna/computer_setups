@@ -1,4 +1,5 @@
 Use homebrew
 
 brew install aria2
+brew install ffmpeg
 gcc: you have to override the mac default one with a new installation from homebrew

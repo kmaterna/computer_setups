@@ -43,6 +43,7 @@ dependencies:
  - simplekml
  - fastkml
  - cutde
+ - imageio
  - pip:
    - pyrocko
    - earthscope-cli
@@ -50,3 +51,5 @@ dependencies:
    - sentinelhub
    - Tectonic-Utils
    - asf_search
+   - imageio-ffmpeg
+   - ffmpeg
