@@ -19,6 +19,7 @@ sudo apt install tasksel
 sudo apt install aria2
 sudo apt install openssh-server
 sudo apt install gnome-system-tools
+sudo apt-get install libxcb-xinerama0
 
 I downloaded the miniconda Linux installer and followed the installation instructions for miniconda3
 

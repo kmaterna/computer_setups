@@ -11,6 +11,7 @@ conda install nb_conda_kernels   # if you want to run Jupyter notebooks from dif
 pip install jupyter
 brew install --cask jupyter-notebook-viewer
 brew install --cask --no-quarantine syntax-highlight
+brew install wget
 
 
 # My Environments: (conda env list)
