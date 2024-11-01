@@ -50,5 +50,6 @@ dependencies:
    - pyqt5
    - earthscope-cli
    - hectorp
+   - cachecontrol[filelock]
 
 
