@@ -12,6 +12,7 @@ pip install jupyter
 brew install --cask jupyter-notebook-viewer
 brew install --cask --no-quarantine syntax-highlight
 brew install wget
+brew install poppler
 
 
 # My Environments: (conda env list)

@@ -53,3 +53,6 @@ dependencies:
    - asf_search
    - imageio-ffmpeg
    - ffmpeg
+   - svglib
+   - reportlab
+   - pdf2image
