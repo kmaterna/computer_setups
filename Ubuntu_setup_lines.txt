@@ -32,6 +32,9 @@ sudo apt-get install libgmt-dev
 
 # To configure the workstation as a server, I installed openssh-server with apt, then used sudo vim /etc/ssh/sshd_config to change to "PasswordAuthentication yes" and restarted the server with "sudo service ssh restart". I then copied a previously created public key from a local machine (from ssh-keygen) using ssh-copy-id user@IP_address with the password. Then I returned to change "PasswordAuthentication no" for safety. After these steps, the remote access through scp and ssh works. 
 
+# For more than one user and remote drives: 
+Note: the /media directory says that it's owned by root user and root group, but it actually applies more granular permissions through ACLs.  Directories within /media (such as /media/username) have ACLs. The drives mounted under a specific user probably do not. Linux tools 'getfacl' and 'setfacl' allow the root user to change who has access to the mounted remote disks. This can be very useful for allowing certain users access to certain drives, without combinatorial explosion of user groups. 
+
 
 # Install mamba in base env
 conda install -n base -c conda-forge mamba
