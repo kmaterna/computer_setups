@@ -44,6 +44,9 @@ Then, based on the mac environment for isce2, let's try this in your base enviro
 conda env create -f isce_requirements.yaml  # Creates environment, now in Python 3.11
 conda activate isceenv
 conda install conda-forge::isce2
+conda install -c conda-forge mintpy
+conda install hyp3_sdk
+conda install asf_search
 
 Then, add a few user-defined paths to your bashrc:
 ISCE_HOME=/......./miniconda3/envs/isceenv/lib/python3.11/site-packages/isce/applications
