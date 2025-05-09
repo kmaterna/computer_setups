@@ -14,14 +14,18 @@ Then you can use ```python -m pstats example2.prof``` to delve into the performa
 
 
 To package and upload a source package to pip: 
-Make sure to change your setup.py to have a new version number. Commit these changes. 
-python setup.py sdist 
-python setup.py bdist_wheel (This creates a source distribution and a wheel, easier for end user)
-python -m twine upload dist/* (use pypi username and password)
-Then tag your last commit to github with the same version number. 
+Make sure to change your pyproj.toml to have a new version number. Commit these changes. 
+
 git tag v0.0.1 (or whatever version you want)
 git push
 git push origin v0.0.1
+poetry build
+poetry publish
+
+# Note: For the poetry upload to PyPI, I needed to create an API key on the PyPI website (with 2FA) and then save it locally using poetry config pypi-token.pypi
+
+
+
 
 To list your conda environments:
 conda env list
