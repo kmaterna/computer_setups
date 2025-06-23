@@ -23,7 +23,7 @@ poetry build
 poetry publish
 
 # Note: For the poetry upload to PyPI, I needed to create an API key on the PyPI website (with 2FA) and then save it locally using poetry config pypi-token.pypi
-
+# Note: poetry works in base conda envrionment
 
 
 
