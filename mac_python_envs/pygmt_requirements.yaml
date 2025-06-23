@@ -48,7 +48,6 @@ dependencies:
  - pip:
    - pyrocko
    - earthscope-cli
-   - okada_wrapper
    - sentinelhub
    - Tectonic-Utils
    - asf_search
@@ -57,3 +56,4 @@ dependencies:
    - svglib
    - reportlab
    - pdf2image
+   - okada_wrapper
