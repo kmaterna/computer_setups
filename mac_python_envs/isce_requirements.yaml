@@ -36,6 +36,6 @@ dependencies:
  - scons
  - opencv 
  - pip:
-    - Tectonic-Utils
+    - tectonic-utils
     - pyrocko
     - asf_search

@@ -46,7 +46,7 @@ dependencies:
  - pyarrow
  - pip: 
    - pyrocko
-   - Tectonic-Utils
+   - tectonic-utils
    - pyqt5
    - earthscope-cli
    - hectorp

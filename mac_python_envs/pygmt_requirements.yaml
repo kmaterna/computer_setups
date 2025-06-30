@@ -50,7 +50,7 @@ dependencies:
    - pyrocko
    - earthscope-cli
    - sentinelhub
-   - Tectonic-Utils
+   - tectonic-utils
    - asf_search
    - imageio-ffmpeg
    - ffmpeg
