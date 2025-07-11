@@ -3,6 +3,7 @@
 # remove environment : conda env remove -n isceenv
 # enter  environment : conda activate isccenv
 # exit   environment : conda deactivate
+# Used for ISCE and LICSBAS
 name: isceenv
 channels:
  - conda-forge
@@ -35,6 +36,13 @@ dependencies:
  - basemap
  - scons
  - opencv 
+ - sardem
+ - beautifulsoup4
+ - astropy
+ - psutil
+ - requests
+ - statsmodels
+ - shapely
  - pip:
     - tectonic-utils
     - pyrocko

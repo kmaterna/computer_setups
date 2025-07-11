@@ -45,3 +45,10 @@ To import a python package from somewhere local, not necessarily on your Python 
 To look for a python package everywhere in your computer recursively: 
 (base) Kathryns-MacBook-Pro-2:B_Research kmaterna$ grep -r --include=*.py 'downsample_gps_ts.' .
 
+
+
+July 2025:
+How to download a Copernicus Glo30 DEM over Iceland and convert it to Ellipsoid height for InSAR processing in ISCE: 
+sardem --data-source COP --make-isce-xml --output-type FLOAT32 --bbox -24.0 63.6 -19.0 65.9
+
+Under the hood, it's doing gdalwarp from EPSG:4326+3855 to EPSG:4326. It calls the correct syntax. Thank you Scott!!! 
