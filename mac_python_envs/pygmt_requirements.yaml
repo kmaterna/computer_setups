@@ -33,6 +33,7 @@ dependencies:
  - ruff
  - tqdm
  - geojson
+ - geopandas
  - openpyxl
  - scikit-learn
  - tornado
