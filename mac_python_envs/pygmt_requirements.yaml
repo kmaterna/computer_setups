@@ -47,6 +47,7 @@ dependencies:
  - imageio
  - twine
  - gdal
+ - rasterio
  - pip:
    - pyrocko
    - earthscope-cli
