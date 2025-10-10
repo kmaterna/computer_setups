@@ -44,6 +44,7 @@ dependencies:
  - gmsh
  - numba
  - pyarrow
+ - fastkml
  - pip: 
    - pyrocko
    - tectonic-utils
