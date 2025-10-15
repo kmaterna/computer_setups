@@ -1,0 +1,22 @@
+# create environment : conda env create -f ml_requirements.yaml
+# update dependencies: conda env update -f ml_requirements.yaml
+# remove environment : conda env remove -n ml
+# enter  environment : conda activate ml
+# exit   environment : conda deactivate
+name: ml
+channels:
+ - conda-forge
+ - anaconda
+ - defaults
+dependencies:
+ - python>=3
+ - matplotlib
+ - numpy
+ - scipy
+ - obspy
+ - xarray
+ - pandas
+ - pip
+ - jupyter
+ - h5py
+ - scikit-learn
